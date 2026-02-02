@@ -1,0 +1,99 @@
+/* フォントや背景色など全体の雰囲気を統一 */
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #ecbee1;
+  color: white;
+  margin: 0;
+  padding: 30px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.controls, .status {
+  margin: 10px 0;
+  font-size: 1.1em;
+}
+
+select, button {
+  padding: 5px 12px;
+  font-size: 1em;
+  border-radius: 6px;
+  border: none;
+  margin-left: 5px;
+  background-color: #a56e93;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover, select:hover {
+  background-color: #a56e93;
+}
+
+#board {
+  display: grid;
+  gap: 4px;
+  justify-content: center;
+  margin: 20px auto;
+  transition: all 0.3s ease;
+}
+
+/* マスの基本スタイル */
+.cell {
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(to bottom, #d870a0, #ecc4e6);
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(179, 139, 179, 0.774);
+  font-size: 18px;
+  line-height: 36px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  color: white;
+  transition: all 0.2s;
+}
+
+.cell:hover {
+  filter: brightness(1.1);
+}
+
+/* 開いたセル */
+.cell.open {
+  background: #ffe3fe;
+  color: #dd8bcf;
+  font-weight: bold;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+  transform: scale(1.02);
+}
+
+/* 地雷セル */
+.cell.mine {
+  background-color: #e53935;
+  color: white;
+}
+
+/* フラグセル */
+.cell.flag {
+  background-color: #f9d342;
+  color: #333;
+  font-weight: bold;
+}
+
+/* レスポンシブ対応（スマホ） */
+@media (max-width: 500px) {
+  .cell {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+    line-height: 28px;
+  }
+
+  #board {
+    gap: 3px;
+  }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>タスク管理アプリ</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>📅 タスク管理アプリ</h1>
+
+    <!-- タスク追加フォーム -->
+    <form id="task-form">
+      <input type="text" id="task-input" placeholder="タスク名を入力" required />
+      
+      <select id="category-select">
+        <option value="勉強">勉強</option>
+        <option value="仕事">仕事</option>
+        <option value="買い物">買い物</option>
+      </select>
+
+      <input type="date" id="due-date" />
+
+      <button type="submit">追加</button>
+    </form>
+
+    <!-- フィルター -->
+    <div class="filter-area">
+      <input type="text" id="search-input" placeholder="検索キーワード..." />
+      <select id="filter-category">
+        <option value="all">すべてのカテゴリ</option>
+        <option value="勉強">勉強</option>
+        <option value="仕事">仕事</option>
+        <option value="買い物">買い物</option>
+      </select>
+    </div>
+    <!-- タスク統計表示 -->
+<div id="task-stats" style="margin-bottom: 20px; font-weight: bold;">
+  全体: 0件 / 完了: 0件（0%）
+</div>
+
+
+    <!-- タスク一覧表示 -->
+    <ul id="task-list">
+      <!-- JavaScriptでここにタスクが表示されます -->
+    </ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

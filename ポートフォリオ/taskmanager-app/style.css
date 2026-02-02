@@ -1,0 +1,129 @@
+/* リセットと全体の基本スタイル */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* フォームのスタイル */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+form input[type="text"],
+form input[type="date"],
+form select {
+  flex: 1;
+  padding: 8px;
+  font-size: 16px;
+}
+
+form button {
+  padding: 8px 16px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #45a049;
+}
+
+/* フィルター */
+.filter-area {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filter-area input,
+.filter-area select {
+  flex: 1;
+  padding: 8px;
+}
+
+/* タスク一覧 */
+#task-list {
+  list-style: none;
+  padding: 0;
+}
+
+.task-item {
+  background-color: #f9f9f9;
+  margin-bottom: 10px;
+  padding: 12px;
+  border-left: 5px solid #ccc;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-item.completed {
+  opacity: 0.6;
+  text-decoration: line-through;
+}
+
+.task-info {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.task-buttons button {
+  margin-left: 8px;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.task-buttons .delete-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.task-buttons .delete-btn:hover {
+  background-color: #d32f2f;
+}
+
+/* カテゴリごとの色分け（左のバー色） */
+.task-item.勉強 {
+  border-left-color: #42a5f5; /* 青 */
+}
+
+.task-item.仕事 {
+  border-left-color: #ab47bc; /* 紫 */
+}
+
+.task-item.買い物 {
+  border-left-color: #66bb6a; /* 緑 */
+}
+
+/* 完了したタスクのスタイル（すでにある場合は調整だけ） */
+.task-item.completed {
+  opacity: 0.6;
+  text-decoration: line-through;
+  background-color: #eee;
+}

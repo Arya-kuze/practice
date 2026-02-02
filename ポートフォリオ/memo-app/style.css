@@ -1,0 +1,101 @@
+/* 全体のフォントとレイアウト */
+body {
+    font-family: sans-serif;
+    background-color: #b1d3db;
+    padding: 40px;
+    max-width: 600px;
+    margin: auto;
+    color: #333;
+}
+
+/* タイトル */
+h1 {
+    text-align: center;
+    color: #000000;
+}
+
+/* メモ入力欄 */
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+/* 保存ボタン */
+button {
+    padding: 8px 12px;
+    font-size: 14px;
+    background-color: #8e65da;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 0 4px;
+}
+
+button:hover {
+    background-color: #7829b9;
+}
+
+/* メモのリスト */
+#memoList {
+    margin-top: 20px;
+    padding-left: 0;
+    list-style: none;
+}
+
+.memo-item {
+    background-color: #ffffff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-left: 5px solid #aa81d1;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.memo-text {
+    flex: 1;
+    margin-right: 10px;
+    word-break: break-word;
+}
+
+.memo-actions {
+    display: flex;
+    gap: 5px;
+}
+
+/* 編集ボタン */
+.edit-btn {
+    background-color: #4cafaa;
+    color: white;
+    margin-left: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.edit-btn:hover {
+    background-color: #38768e;
+}
+
+/* 削除ボタン */
+.delete-btn {
+    background-color: #e04f67;
+    color: white;
+    margin-left: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: #b43247;
+}
